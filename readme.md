@@ -1,4 +1,5 @@
 # velobracket ('veloren' + 'bracket-lib')
+![Build Check](https://github.com/rudym/velobracket/actions/workflows/rust.yml/badge.svg)
 
 velobracket is Dwarf Fortress inspired frontend to Veloren, the multiplayer RPG voxel game written in Rust.
 
