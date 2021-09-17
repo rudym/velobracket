@@ -1,0 +1,23 @@
+[package]
+name = "velobracket"
+version = "0.1.0"
+authors = ["Rodion Martynov <rmartynov@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bracket-lib = "0.8"
+bracket-terminal = "0.8.5"
+vek = { version = "=0.14.1", features = ["serde"] }
+clap = "2.33"
+specs = { git = "https://github.com/amethyst/specs.git", rev = "f985bec5d456f7b0dd8aae99848f9473c2cd9d46" }
+tokio = "1"
+
+veloren-client = { git = "https://gitlab.com/veloren/veloren.git", branch = "master" }
+veloren-common = { git = "https://gitlab.com/veloren/veloren.git", branch = "master", features = ["no-assets"] }
+veloren-common-state = {  git = "https://gitlab.com/veloren/veloren.git", branch = "master", default-features = false }
+
+[profile.dev]
+opt-level = 2
+overflow-checks = false
