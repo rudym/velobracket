@@ -71,7 +71,7 @@ impl GameState for State {
                 .map_or((0.0, 0.0), |health| (health.current(), health.maximum()));
             let (current_energy, max_energy) = client
                 .current::<comp::Energy>()
-                .map_or((0, 0), |energy| (energy.current(), energy.maximum()));
+                .map_or((0.0, 0.0), |energy| (energy.current(), energy.maximum()));
 
             // Invite Logic
             let (inviter_uid, invite_kind) =
@@ -501,8 +501,8 @@ impl GameState for State {
                 4,
                 &format!(
                     "#[pink]Energy: #[]{}/#[]{}",
-                    current_energy / 10,
-                    max_energy / 10
+                    current_energy / 10.0,
+                    max_energy / 10.0
                 ),
                 TextAlign::Right,
                 None,
